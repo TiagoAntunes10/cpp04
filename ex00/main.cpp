@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 14:13:41 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/10 22:26:15 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/04/12 12:17:44 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int main()
 	delete meta;
 	delete j;
 	delete i;
+
+	std::cout << std::endl;
 
 	const WrongAnimal* wrong_meta = new WrongAnimal();
 	const WrongAnimal* wrong_i = new WrongCat();
