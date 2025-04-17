@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 15:42:11 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/10 17:14:46 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/04/12 22:08:44 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,6 @@ Animal &Animal::operator= ( Animal const &animal ) {
 	std::cout << "Animal assignment operator" << std::endl;
 	return (*this);
 }
-
-// void	Animal::makeSound( void ) const {
-// 	return ;
-// }
 
 std::string	Animal::getType( void ) const {
 	return (type);

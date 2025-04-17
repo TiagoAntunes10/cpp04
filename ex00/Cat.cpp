@@ -6,13 +6,13 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 15:47:31 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/10 22:22:04 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/04/17 15:51:07 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Include/includes.hpp"
 
-Cat::Cat( void ) : Animal() {
+Cat::Cat( void ) {
 	type = "Cat";
 	std::cout << "Cat constructor" << std::endl;
 }
@@ -27,6 +27,8 @@ Cat::Cat( Cat const &cat ) : Animal(cat) {
 }
 
 Cat &Cat::operator= ( Cat const &cat ) {
+	Animal::operator= (cat);
+
 	type = cat.type;
 	std::cout << "Cat assignment operator" << std::endl;
 	return (*this);
