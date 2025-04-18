@@ -1,8 +1,8 @@
 LIB = ./Include
 PRE = ./
 
-SOURCE = main.cpp AAnimal.cpp Cat.cpp Dog.cpp \
-		 Brain.cpp
+SOURCE = main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp \
+		 MateriaSource.cpp
 
 SOURCES = ${addprefix $(PRE), $(SOURCE)}
 
