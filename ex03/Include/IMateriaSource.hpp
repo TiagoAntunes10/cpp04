@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 21:44:36 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/17 21:46:09 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/04/24 22:17:32 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 
 # include "./AMateria.hpp"
 
-class IMateriaSource
-{
+class IMateriaSource {
 	public:
 		virtual ~IMateriaSource() {};
 		virtual void learnMateria(AMateria *m) = 0;

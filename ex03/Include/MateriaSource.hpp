@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 21:51:17 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/18 16:18:34 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/04/24 22:16:25 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 # include "./AMateria.hpp"
 # include "./IMateriaSource.hpp"
 
-class MateriaSource
-{
+class MateriaSource : public IMateriaSource {
 	private:
 		AMateria	*_slot[4];
 		int			_used_slots;
