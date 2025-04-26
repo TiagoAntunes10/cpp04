@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 21:46:51 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/17 21:47:56 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/04/26 13:56:09 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,56 @@ int main()
 
 	me->use(0, *bob);
 	me->use(1, *bob);
+	me->use(2, *bob);
+	me->use(4, *bob);
+
+	std::cout << std::endl;
+	src->learnMateria(new Ice());
+	src->learnMateria(new Cure());
+	src->learnMateria(new Cure());
+
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+
+	tmp = src->createMateria("cure");
+	me->equip(tmp);
+
+	tmp = src->createMateria("cure");
+	me->equip(tmp);
+	delete tmp;
+
+	me->use(0, *bob);
+	me->use(1, *bob);
+	me->use(2, *bob);
+	me->use(3, *bob);
+	me->use(4, *bob);
+
+	me->unequip(1);
+	std::cout << std::endl;
+
+	me->use(0, *bob);
+	me->use(1, *bob);
+	me->use(2, *bob);
+	me->use(3, *bob);
+
+	me->unequip(3);
+	me->unequip(4);
+	me->unequip(2);
+	std::cout << std::endl;
+
+	me->use(0, *bob);
+	me->use(1, *bob);
+	me->use(2, *bob);
+
+	tmp = src->createMateria("ice");
+	me->equip(tmp);
+
+	std::cout << std::endl;
+
+	me->use(0, *bob);
+	me->use(1, *bob);
+	me->use(2, *bob);
+	me->use(3, *bob);
 
 	delete bob;
 	delete me;

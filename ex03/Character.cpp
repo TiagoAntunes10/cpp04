@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 11:36:46 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/26 12:45:12 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/04/26 14:59:01 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,7 @@ void Character::equip(AMateria* m) {
 
 	_slot[_equiped_mat] = m;
 	_equiped_mat++;
+	_slot[_equiped_mat] = NULL;
 }
 
 void Character::unequip(int idx) {
@@ -91,6 +92,7 @@ void Character::unequip(int idx) {
 	}
 
 	_equiped_mat--;
+	_slot[_equiped_mat] = NULL;
 }
 
 void Character::use(int idx, ICharacter& target) {
