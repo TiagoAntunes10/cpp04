@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 11:36:46 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/26 14:59:01 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/04/26 21:22:22 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,8 @@ Character::Character( std::string name ) {
 }
 
 Character::~Character() {
-	for (int i = 0; i < _equiped_mat; i++) {
+	for (int i = 0; i < _equiped_mat; i++)
 		delete _slot[i];
-	}
 
 	clean_arr(_drop_mat);
 }
@@ -78,7 +77,6 @@ void Character::equip(AMateria* m) {
 
 	_slot[_equiped_mat] = m;
 	_equiped_mat++;
-	_slot[_equiped_mat] = NULL;
 }
 
 void Character::unequip(int idx) {
@@ -92,7 +90,6 @@ void Character::unequip(int idx) {
 	}
 
 	_equiped_mat--;
-	_slot[_equiped_mat] = NULL;
 }
 
 void Character::use(int idx, ICharacter& target) {
@@ -105,13 +102,13 @@ void Character::use(int idx, ICharacter& target) {
 void	Character::drop_materia(AMateria *m) {
 	AMateria	**mat_arr = new AMateria*[_floor_mat + 2];
 	
-	for (int i = 0; i < _floor_mat; i++) {
+	for (int i = 0; i < _floor_mat; i++)
 		mat_arr[i] = _drop_mat[i];
-	}
+
 	mat_arr[_floor_mat] = m;
 	mat_arr[_floor_mat + 1] = NULL;
 
-	clean_arr(_drop_mat);
+	delete[] _drop_mat;
 
 	_drop_mat = mat_arr;	
 

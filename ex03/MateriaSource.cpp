@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 15:47:24 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/26 12:46:00 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/04/26 21:18:14 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,8 +35,10 @@ MateriaSource	&MateriaSource::operator= ( MateriaSource const &ms ) {
 }
 
 void MateriaSource::learnMateria(AMateria *m) {
-	if (_used_slots == 4)
+	if (_used_slots == 4) {
+		delete m;
 		return ;
+	}
 
 	_slot[_used_slots] = m;
 
