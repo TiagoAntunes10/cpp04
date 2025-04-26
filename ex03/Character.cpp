@@ -6,19 +6,21 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 11:36:46 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/18 16:07:14 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/04/26 12:45:12 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Include/Character.hpp"
 #include "./Include/include.hpp"
 
 static void	clean_arr(AMateria **arr) {
+	int	i;
+
 	if (arr == NULL)
 		return ;
 
-	while (*arr != NULL)
-		delete *arr;
+	i = 0;
+	while (arr[i] != NULL)
+		delete arr[i++];
 
 	delete[] arr;
 }
@@ -79,15 +81,13 @@ void Character::equip(AMateria* m) {
 }
 
 void Character::unequip(int idx) {
-	int	i;
-
 	if (idx >= _equiped_mat || idx < 0)
 		return ;
 
 	drop_materia(_slot[idx]);
 	if (idx < _equiped_mat - 1) {
-		for (idx; idx < _equiped_mat; idx++)
-			_slot[idx] = _slot[idx + 1];
+		for (int i = idx; i < _equiped_mat; i++)
+			_slot[i] = _slot[i + 1];
 	}
 
 	_equiped_mat--;

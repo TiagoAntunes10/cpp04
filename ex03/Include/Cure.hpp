@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 21:38:27 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/18 15:16:37 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/04/26 12:50:29 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "./AMateria.hpp"
 
-class Cure : virtual AMateria {
+class Cure : virtual public AMateria {
 	public:
 		Cure( void );
 		~Cure( void );

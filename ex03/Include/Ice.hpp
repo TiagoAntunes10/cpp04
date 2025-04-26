@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 21:35:52 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/18 15:16:34 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/04/26 12:50:40 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 # include "./AMateria.hpp"
 
-class Ice : virtual AMateria {
+class Ice : virtual public AMateria {
 	public:
 		Ice( void );
 		~Ice( void );

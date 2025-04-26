@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/18 15:47:24 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/18 16:15:38 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/04/26 12:46:00 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,8 @@ MateriaSource	&MateriaSource::operator= ( MateriaSource const &ms ) {
 
 	for (int i = 0; i < ms._used_slots; i++)
 		_slot[i] = ms._slot[i]->clone();
+
+	return (*this);
 }
 
 void MateriaSource::learnMateria(AMateria *m) {

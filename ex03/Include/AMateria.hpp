@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 21:33:27 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/18 11:20:39 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/04/26 12:48:41 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,8 @@
 # define AMATERIA_HPP
 
 # include <iostream>
-# include "./ICharacter.hpp"
+
+class ICharacter;
 
 class AMateria {
 	protected:
@@ -22,6 +23,7 @@ class AMateria {
 
 	public:
 		AMateria(std::string const & type);
+		virtual ~AMateria() {};
 		std::string const & getType() const;
 		virtual AMateria* clone() const = 0;
 		virtual void use(ICharacter& target);

@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 21:42:55 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/18 15:16:31 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/04/26 12:33:08 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 # define CHARACTER_HPP
 
 # include "./AMateria.hpp"
+# include "./ICharacter.hpp"
 
-class Character : virtual ICharacter {
+class Character : virtual public ICharacter {
 	private:
 		AMateria	*_slot[4];
 		int			_equiped_mat;
