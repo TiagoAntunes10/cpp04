@@ -6,7 +6,7 @@ SOURCE = main.cpp AMateria.cpp Character.cpp Cure.cpp Ice.cpp \
 
 SOURCES = ${addprefix $(PRE), $(SOURCE)}
 
-NAME = abstract
+NAME = interface
 
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98

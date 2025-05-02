@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 15:56:55 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/10 22:24:21 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/05/02 14:52:04 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,6 @@ WrongAnimal &WrongAnimal::operator= ( WrongAnimal const &wrong_animal ) {
 	std::cout << "WrongAnimal assignment operator" << std::endl;
 	return (*this);
 }
-
-// void	WrongAnimal::makeSound( void ) const {
-// 	return ;
-// }
 
 std::string	WrongAnimal::getType( void ) const {
 	return (type);
