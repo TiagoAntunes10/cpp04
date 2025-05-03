@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 21:01:36 by tialbert          #+#    #+#             */
-/*   Updated: 2025/05/02 15:45:07 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/05/03 22:05:22 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,18 @@ int main()
 	}
 
 	delete[] meta;
+
+	Cat	cat1;
+	{
+		Cat	cat2(cat1);
+		Cat cat3 = cat2;
+	}
+
+	Dog	dog1;
+	{
+		Dog	dog2(dog1);
+		Dog dog3 = dog2;
+	}
 
 	return 0;
 }

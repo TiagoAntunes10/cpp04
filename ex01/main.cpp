@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 14:13:41 by tialbert          #+#    #+#             */
-/*   Updated: 2025/05/02 15:26:59 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/05/03 22:04:32 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,23 +47,16 @@ int main()
 	std::cout << std::endl << std::endl;
 
 	Cat	cat1;
-	Cat	cat2(cat1);
-	Cat cat3 = cat2;
+	{
+		Cat	cat2(cat1);
+		Cat cat3 = cat2;
+	}
+
 	Dog	dog1;
-	Dog	dog2(dog1);
-	Dog dog3 = dog2;
-
-	std::cout << std::endl;
-
-	std::cout << cat1.getType() << ": " << &cat1 << std::endl;
-	std::cout << cat2.getType() << ": " << &cat2 << std::endl;
-	std::cout << cat3.getType() << ": " << &cat3 << std::endl;
-
-	std::cout << dog1.getType() << ": " << &dog1 << std::endl;
-	std::cout << dog2.getType() << ": " << &dog2 << std::endl;
-	std::cout << dog3.getType() << ": " << &dog3 << std::endl;
-
-	std::cout << std::endl;
+	{
+		Dog	dog2(dog1);
+		Dog dog3 = dog2;
+	}
 
 	return 0;
 }
