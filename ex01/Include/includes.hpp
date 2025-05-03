@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 14:15:56 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/10 14:48:53 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/05/03 12:04:00 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,5 @@
 
 # include "./Cat.hpp"
 # include "./Dog.hpp"
-# include "./WrongCat.hpp"
 
 #endif

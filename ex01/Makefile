@@ -2,7 +2,7 @@ LIB = ./Include
 PRE = ./
 
 SOURCE = main.cpp Animal.cpp Cat.cpp Dog.cpp \
-		 WrongAnimal.cpp WrongCat.cpp Brain.cpp
+		 Brain.cpp
 
 SOURCES = ${addprefix $(PRE), $(SOURCE)}
 
