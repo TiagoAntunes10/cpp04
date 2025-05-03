@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 14:13:41 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/12 12:17:44 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/05/03 22:09:37 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,12 @@ int main()
 
 	delete wrong_meta;
 	delete wrong_i;
+
+	std::cout << std::endl;
+
+	WrongCat	test;
+
+	test.makeSound();
 
 	return 0;
 }

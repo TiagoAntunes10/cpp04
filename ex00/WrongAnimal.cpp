@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 15:56:55 by tialbert          #+#    #+#             */
-/*   Updated: 2025/05/03 11:56:48 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/05/03 22:08:54 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ WrongAnimal &WrongAnimal::operator= ( WrongAnimal const &wrong_animal ) {
 }
 
 void	WrongAnimal::makeSound( void ) const {
-	std::cout << "WrongAnimal: *Bark* Bark* *Bark*" << std::endl;
+	std::cout << "WrongAnimal: does not make sound" << std::endl;
 }
 
 std::string	WrongAnimal::getType( void ) const {
