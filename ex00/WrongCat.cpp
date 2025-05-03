@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/10 15:52:45 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/10 22:23:09 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/05/03 11:58:23 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,6 @@ WrongCat &WrongCat::operator= ( WrongCat const &wrong_cat ) {
 }
 
 void	WrongCat::makeSound( void ) const {
-	std::cout << "WrongCat: *Bark* Bark* *Bark*" << std::endl;
+	std::cout << "WrongCat: ";
+	WrongAnimal::makeSound();
 }
