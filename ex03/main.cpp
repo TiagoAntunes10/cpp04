@@ -6,7 +6,7 @@
 /*   By: tialbert <tialbert@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/17 21:46:51 by tialbert          #+#    #+#             */
-/*   Updated: 2025/04/26 13:56:09 by tialbert         ###   ########.fr       */
+/*   Updated: 2025/05/03 12:40:12 by tialbert         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,8 +82,42 @@ int main()
 	me->use(2, *bob);
 	me->use(3, *bob);
 
-	delete bob;
 	delete me;
+
+	std::cout << std::endl << std::endl;
+
+	Character	test_copy("copies");
+
+	tmp = src->createMateria("ice");
+	test_copy.equip(tmp);
+
+	tmp = src->createMateria("cure");
+	test_copy.equip(tmp);
+
+	Character	copy_2(test_copy);
+	Character	copy_3 = test_copy;
+
+	std::cout << "original: " << &test_copy << std::endl;
+	std::cout << "copy constructor copy: " << &copy_2 << std::endl;
+	std::cout << "copy assignment copy: " << &copy_3 << std::endl;
+
+	std::cout << std::endl;
+
+	test_copy.use(0, *bob);
+	copy_2.use(0, *bob);
+	copy_3.use(0, *bob);
+
+	std::cout << std::endl;
+
+	test_copy.use(1, *bob);
+	copy_2.use(1, *bob);
+	copy_3.use(1, *bob);
+
+	test_copy.use(2, *bob);
+	copy_2.use(2, *bob);
+	copy_3.use(2, *bob);
+
+	delete bob;
 	delete src;
 
 	return 0;
